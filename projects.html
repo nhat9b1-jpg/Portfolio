@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive portfolio showcase featuring filterable projects in Web Design, Java OOP, Database Design, and Computer Networking.">
+  <title>Projects | Nguyen Hai Duong — Developer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+  <header class="site-header">
+    <div class="container header-bar">
+      <p class="brand">
+        <i class="fa-solid fa-code" aria-hidden="true"></i>
+        <span>NHD.dev</span>
+      </p>
+
+      <div class="header-controls">
+        <button type="button" id="theme-toggle" class="icon-btn" aria-pressed="false" aria-label="Toggle color theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <span>Dark</span>
+        </button>
+        <button type="button" id="menu-toggle" class="icon-btn" aria-expanded="false" aria-controls="primary-nav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <span>Menu</span>
+        </button>
+      </div>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <div class="section-header">
+      <span class="eyebrow">Interactive Project Catalog</span>
+      <h1>My Projects</h1>
+      <p class="lead">Filter projects by category or open the accessible Lightbox preview to inspect technical highlights.</p>
+    </div>
+
+    <section class="section-block" aria-labelledby="catalog-heading">
+      <h2 id="catalog-heading">Filter by Discipline</h2>
+
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+        <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web Design</button>
+        <button type="button" class="filter-btn" data-filter="java" aria-pressed="false">Java OOP</button>
+        <button type="button" class="filter-btn" data-filter="infra" aria-pressed="false">Database &amp; Network</button>
+      </div>
+
+      <p id="filter-status" class="filter-status" aria-live="polite">Showing 6 projects in "All Projects".</p>
+
+      <div class="grid-cards">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="web">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%231e293b%22%2F%3E%3Crect%20x%3D%2240%22%20y%3D%2245%22%20width%3D%22520%22%20height%3D%2255%22%20rx%3D%228%22%20fill%3D%22%231d4ed8%22%2F%3E%3Crect%20x%3D%2240%22%20y%3D%22120%22%20width%3D%22160%22%20height%3D%22205%22%20rx%3D%228%22%20fill%3D%22%23334155%22%2F%3E%3Crect%20x%3D%22220%22%20y%3D%22120%22%20width%3D%22160%22%20height%3D%22205%22%20rx%3D%228%22%20fill%3D%22%23334155%22%2F%3E%3Crect%20x%3D%22400%22%20y%3D%22120%22%20width%3D%22160%22%20height%3D%22205%22%20rx%3D%228%22%20fill%3D%22%23334155%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2281%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%3EMecha%20Builder%20Base%3C%2Ftext%3E%3Ctext%20x%3D%22220%22%20y%3D%22230%22%20fill%3D%22%2393c5fd%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E3-Page%20HTML5%20Site%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Wireframe preview of Mecha Builder Base multi-page website"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>Mecha Builder Base</h3>
+            <p>Three-page HTML5/CSS3 hobby showcase dedicated to mecha model kits with accessible keyboard navigation and W3C/WAVE validation.</p>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Accessibility</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="Mecha Builder Base"
+                data-stack="HTML5, CSS Grid, Flexbox, WAVE &amp; aXe DevTools"
+                data-details="Built as a three-page static website showcasing custom mecha builds and display photography. Implemented skip-to-content links, semantic gallery grids, and verified zero errors across W3C and WAVE validators.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="web">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%230f172a%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%2235%22%20width%3D%22490%22%20height%3D%22195%22%20rx%3D%2210%22%20fill%3D%22%231d4ed8%22%2F%3E%3Crect%20x%3D%2255%22%20y%3D%22250%22%20width%3D%22110%22%20height%3D%2285%22%20rx%3D%226%22%20fill%3D%22%23334155%22%2F%3E%3Crect%20x%3D%22182%22%20y%3D%22250%22%20width%3D%22110%22%20height%3D%2285%22%20rx%3D%226%22%20fill%3D%22%23334155%22%2F%3E%3Crect%20x%3D%22309%22%20y%3D%22250%22%20width%3D%22110%22%20height%3D%2285%22%20rx%3D%226%22%20fill%3D%22%23334155%22%2F%3E%3Crect%20x%3D%22435%22%20y%3D%22250%22%20width%3D%22110%22%20height%3D%2285%22%20rx%3D%226%22%20fill%3D%22%23334155%22%2F%3E%3Ctext%20x%3D%22130%22%20y%3D%22142%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%3EInteractive%20JS%20Photo%20Gallery%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Diagram of the Interactive JavaScript Photo Gallery with main preview stage and thumbnail row"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>Accessible JS Photo Gallery</h3>
+            <p>Interactive gallery responding to both mouse hover and keyboard Tab focus, dynamically injecting tabindex attributes on load.</p>
+            <ul class="tag-list">
+              <li>JavaScript</li>
+              <li>Keyboard A11y</li>
+              <li>DOM Events</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="Accessible JS Photo Gallery"
+                data-stack="Vanilla JavaScript, HTML5, CSS3, Focus/Blur Event Handling"
+                data-details="Developed for Interactivity with JavaScript. Loops over all thumbnail images on page load to assign keyboard focus attributes, updating the main display stage and descriptive alt caption dynamically on focus and mouseover.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-category="web">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%231e293b%22%2F%3E%3Crect%20x%3D%2240%22%20y%3D%2260%22%20width%3D%22100%22%20height%3D%22250%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%2360a5fa%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%22165%22%20y%3D%2260%22%20width%3D%22150%22%20height%3D%22250%22%20rx%3D%2212%22%20fill%3D%22%230f172a%22%20stroke%3D%22%2360a5fa%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%22340%22%20y%3D%2260%22%20width%3D%22220%22%20height%3D%22250%22%20rx%3D%2210%22%20fill%3D%22%230f172a%22%20stroke%3D%22%2360a5fa%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22145%22%20y%3D%2240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%3EMobile-First%20Responsive%20System%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Three-device responsive wireframe showing mobile, tablet, and desktop breakpoints"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>Mobile-First Responsive Grid</h3>
+            <p>Adaptive gallery layout featuring 772px and 992px media queries, automatic dark color scheme adaptation, and reduced motion rules.</p>
+            <ul class="tag-list">
+              <li>Media Queries</li>
+              <li>Dark Mode</li>
+              <li>Reduced Motion</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="Mobile-First Responsive Grid"
+                data-stack="CSS Grid, Media Queries (772px / 992px), prefers-color-scheme, prefers-reduced-motion"
+                data-details="Designed starting from single-column mobile screens and progressively enhanced into two-column circular cards on tablets and spanning featured figures on large desktop displays.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-category="java">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%230f172a%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%2250%22%20width%3D%22510%22%20height%3D%22275%22%20rx%3D%2212%22%20fill%3D%22%231e293b%22%20stroke%3D%22%2338bdf8%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%2275%22%20y%3D%22115%22%20fill%3D%22%2338bdf8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%3EHandbag%20Management%20System%3C%2Ftext%3E%3Ctext%20x%3D%2275%22%20y%3D%22165%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%3E%5B1%5D%20Product%20%26amp%3B%20Inventory%20CRUD%3C%2Ftext%3E%3Ctext%20x%3D%2275%22%20y%3D%22205%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%3E%5B2%5D%20Customer%20%26amp%3B%20Sales%20Orders%3C%2Ftext%3E%3Ctext%20x%3D%2275%22%20y%3D%22245%22%20fill%3D%22%234ade80%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%3E%5B3%5D%20Comparator%20Sorting%20%26amp%3B%20Reports%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Console diagram of the Java Handbag Management System"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>Handbag Management System</h3>
+            <p>Full-featured Java console application implementing product, customer, sales, inventory tracking, and revenue reporting modules.</p>
+            <ul class="tag-list">
+              <li>Java OOP</li>
+              <li>ArrayList</li>
+              <li>Comparator</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="Handbag Management System (Java)"
+                data-stack="Java SE, NetBeans IDE, Custom ArrayList Subclasses, Comparator API"
+                data-details="Engineered with clean object-oriented encapsulation, input validation helpers, multi-criteria sorting, and tabular console reporting for retail handbag inventory and customer invoices.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-category="infra">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%23172554%22%2F%3E%3Crect%20x%3D%2245%22%20y%3D%2280%22%20width%3D%22150%22%20height%3D%22210%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20x%3D%22225%22%20y%3D%2280%22%20width%3D%22150%22%20height%3D%22210%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20x%3D%22405%22%20y%3D%2280%22%20width%3D%22150%22%20height%3D%22210%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%2F%3E%3Cline%20x1%3D%22195%22%20y1%3D%22185%22%20x2%3D%22225%22%20y2%3D%22185%22%20stroke%3D%22%2393c5fd%22%20stroke-width%3D%224%22%2F%3E%3Cline%20x1%3D%22375%22%20y1%3D%22185%22%20x2%3D%22405%22%20y2%3D%22185%22%20stroke%3D%22%2393c5fd%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%2265%22%20y%3D%22125%22%20fill%3D%22%230f172a%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3ECUPPING%3C%2Ftext%3E%3Ctext%20x%3D%22245%22%20y%3D%22125%22%20fill%3D%22%230f172a%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3ESCORES%3C%2Ftext%3E%3Ctext%20x%3D%22425%22%20y%3D%22125%22%20fill%3D%22%230f172a%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3ECOFFEE_LOT%3C%2Ftext%3E%3Ctext%20x%3D%22160%22%20y%3D%2248%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22700%22%3EDB_CUPPING%20Relational%20Schema%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Database schema diagram for DB_CUPPING coffee cupping event tables"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>DB_CUPPING Relational Schema</h3>
+            <p>Normalized SQL database architecture and synthetic dataset generator built for tracking coffee cupping tasting scores.</p>
+            <ul class="tag-list">
+              <li>SQL</li>
+              <li>3NF Schema</li>
+              <li>Mock Data</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="DB_CUPPING Relational Database"
+                data-stack="SQL Server, Entity-Relationship Modeling, Foreign Key Constraints"
+                data-details="Modeled events, tasters, coffee lots, and sensory evaluation scorecards in third normal form, complete with an automated SQL script for realistic mock-data seeding and analytical queries.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card" data-category="infra">
+          <img
+            class="project-thumb"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20375%22%3E%3Crect%20width%3D%22600%22%20height%3D%22375%22%20fill%3D%22%230f172a%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22105%22%20r%3D%2238%22%20fill%3D%22%231d4ed8%22%2F%3E%3Crect%20x%3D%2295%22%20y%3D%22230%22%20width%3D%22120%22%20height%3D%2265%22%20rx%3D%228%22%20fill%3D%22%231e293b%22%20stroke%3D%22%2393c5fd%22%20stroke-width%3D%223%22%2F%3E%3Crect%20x%3D%22385%22%20y%3D%22230%22%20width%3D%22120%22%20height%3D%2265%22%20rx%3D%228%22%20fill%3D%22%231e293b%22%20stroke%3D%22%2393c5fd%22%20stroke-width%3D%223%22%2F%3E%3Cline%20x1%3D%22275%22%20y1%3D%22135%22%20x2%3D%22165%22%20y2%3D%22230%22%20stroke%3D%22%234ade80%22%20stroke-width%3D%224%22%2F%3E%3Cline%20x1%3D%22325%22%20y1%3D%22135%22%20x2%3D%22435%22%20y2%3D%22230%22%20stroke%3D%22%234ade80%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22112%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%3EROUTER%3C%2Ftext%3E%3Ctext%20x%3D%22155%22%20y%3D%22268%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%3EVLAN%2010%3C%2Ftext%3E%3Ctext%20x%3D%22445%22%20y%3D%22268%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22700%22%3EVLAN%2020%3C%2Ftext%3E%3Ctext%20x%3D%22150%22%20y%3D%22340%22%20fill%3D%22%2393c5fd%22%20font-family%3D%22sans-serif%22%20font-size%3D%2219%22%20font-weight%3D%22700%22%3EIPv4%2FIPv6%20VLSM%20%26amp%3B%20SSH%20Topology%3C%2Ftext%3E%3C%2Fsvg%3E"
+            alt="Network topology diagram connecting a core router to VLAN 10 and VLAN 20 switches"
+            width="600"
+            height="375">
+          <div class="project-body">
+            <h3>Enterprise VLAN &amp; VLSM Lab</h3>
+            <p>Cisco Packet Tracer network configuration featuring IPv4/IPv6 VLSM subnetting, inter-VLAN routing, SSH hardening, and mail servers.</p>
+            <ul class="tag-list">
+              <li>Packet Tracer</li>
+              <li>VLSM / IPv6</li>
+              <li>SSH &amp; VLAN</li>
+            </ul>
+            <div class="project-actions">
+              <button
+                type="button"
+                class="btn btn-primary preview-btn"
+                data-title="Enterprise VLAN &amp; VLSM Topology"
+                data-stack="Cisco IOS CLI, Packet Tracer, IPv4/IPv6 Subnetting, VTY SSH Access"
+                data-details="Configured end-to-end routing and switching with variable-length subnet masks, secured VTY lines with SSH authentication, and verified internal SMTP/POP3 mail server connectivity.">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                Quick Preview
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Accessible Native Lightbox Dialog -->
+    <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title">Project Details</h2>
+        <button type="button" id="modal-close" class="icon-btn" aria-label="Close project preview">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          <span>Close</span>
+        </button>
+      </div>
+      <div class="modal-content">
+        <img id="modal-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%3E%3C%2Fsvg%3E" alt="Selected project preview">
+        <p><strong>Tech Stack:</strong> <span id="modal-stack"></span></p>
+        <p id="modal-desc"></p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>&copy; 2026 Nguyen Hai Duong. Built for the University of Michigan Web Design for Everybody Capstone.</p>
+        <p>Base Template Credit: <a href="https://startbootstrap.com/theme/freelancer" target="_blank" rel="noopener noreferrer">Start Bootstrap – Freelancer (MIT License)</a>.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
